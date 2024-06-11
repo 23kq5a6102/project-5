@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>LOGIN PAGE</title>
+<link rel="stylesheet" href="loginstyle.css">
+<script>
+    function loginvalidation(){
+        var uname=document.myform.username.value;
+        var password=document.myform.password.value;
+        if (uname==null||uname==""){
+            alert("name cant be null")
+            return false;
+        }
+        else if(password.length<6){
+            alert("password should contain 6 characters")
+            return false;
+        } else{
+        return true;
+    }
+}
+</script>
+<body>
+    <div class="navbar">
+         <h1 class="title">LET'S FOOTBALL</h1>
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACTUS</a></li>
+            <li><a href="#">CAREER MODE</a></li>
+           
+          
+        </ul>
+    </div>
+    <div class="box">
+       <form name="myform" action="career.html" onsubmit="return loginvalidation(this)">
+         <h3>LOGIN FORM	</h3>
+          User name :<br>
+          <input type="text" name="username" placeholder="Enter Username"> <br>
+          <br>
+           Password  :<br><input type="password" name="password" placeholder="Enter Password"> <br>
+           <br>
+           <input type="Submit" value="Submit">
+        </form>
+        didn't have account ?<br>
+        <a href="registrationpage.html">Register here.</a><br>
+        Forgot Password ?<br>
+        <a href="#">Change Password</a>
+    </div>
+
+</body>
+</html>
+ 
